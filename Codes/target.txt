@@ -1,0 +1,4 @@
+number = 0 a = 1.0 b = 2.0  pol = 3.0 
+number = 1 a = 4.0 b = 5.0  pol = 20.0 
+number = 2 a = 6.0 b = 7.0  pol = 42.0 
+number = 3 a = 8.0 b = 9.0  pol = 72.0 

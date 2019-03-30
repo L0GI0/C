@@ -1,0 +1,10 @@
+BST.exe: drzewoBST.a drzewo_main.o
+	gcc -o BST.exe -L. drzewo_main -drzewoBST
+drzewoBST.a: drzewoBST.o 
+	ar rs libdrzewoBST.a 
+drzewoBST.o : drzewoBST.c drzewoBST.h
+	gcc -c drzewoBST.c
+drzewo_main.o : drzewo_main.c drzewoBST.h
+	gcc -i drzewo_main.c
+clear: 
+	-r *.o BST.exe

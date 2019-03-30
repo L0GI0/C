@@ -1,0 +1,4 @@
+numer = 0 a = 1.0 b = 2.0 pole = 3.0
+numer = 1 a = 4.0 b = 5.0 pole = 20.0
+numer = 2 a = 6.0 b = 7.0 pole = 42.0
+numer = 3 a = 8.0 b = 9.0 pole = 72.0
