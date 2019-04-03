@@ -1,0 +1,28 @@
+Task 1
+
+Each node in a binary tree contains an integer value and two pointers to next-level nodes: “left” and “right”. We call a tree sorted if for each node the following statement is correct:
+
+“All values in the left subtree are less than or equal to the value of the node, and all values in the right subtree are greater than the value of the node.”
+
+Write a function that takes a pointer to a root of a tree and checks whether the tree is sorted.
+
+Task 2
+
+There is a 3D point and a line segment (bounded 3D line) given by endpoints. Assuming simple vector operations vecSub, vecAdd, vecDot, vecCross, vecDist and vecLen are available, write a function that will compute the distance from the point to the line segment?
+
+
+Task 3
+
+Write a routine that does the following: for a given value N, create and initialize an N×N matrix. Deduce the initialization algorithm from the following examples:
+
+Example 1: N = 2, the matrix is:
+
+1 2
+4 3 
+
+Example 2: N = 4, the matrix is:
+
+ 1   2   3   4
+12  13  14   5
+11  16  15   6
+10   9   8   7
