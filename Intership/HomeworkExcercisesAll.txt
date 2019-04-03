@@ -2,7 +2,7 @@ Task 1
 
 Each node in a binary tree contains an integer value and two pointers to next-level nodes: “left” and “right”. We call a tree sorted if for each node the following statement is correct:
 
-“All values in the left subtree are less than or equal to the value of the node, and all values in the right subtree are greater than the value of the node.”
+“All values in the left subtree are less sthan or equal to the value of the node, and all values in the right subtree are greater than the value of the node.”
 
 Write a function that takes a pointer to a root of a tree and checks whether the tree is sorted.
 
