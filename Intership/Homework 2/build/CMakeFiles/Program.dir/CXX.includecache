@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/logio/Desktop/Programming Languages/C/Intership/Homework 2/Task2.cpp
+Task2.h
+/home/logio/Desktop/Programming Languages/C/Intership/Homework 2/Task2.h
+
+/home/logio/Desktop/Programming Languages/C/Intership/Homework 2/Task2.h
+iostream
+-
+math.h
+-
+
+/home/logio/Desktop/Programming Languages/C/Intership/Homework 2/Task2Main.cpp
+iostream
+-
+Task2.h
+/home/logio/Desktop/Programming Languages/C/Intership/Homework 2/Task2.h
+

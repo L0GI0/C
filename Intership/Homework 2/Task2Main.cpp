@@ -3,13 +3,7 @@
 
 #include "Task2.h"
 
-
-float PointToLineDistance_1(const Vector & P1, const Vector & P2, const Vector & P3)const{
-	
-	
-	float t;
-	
-	/*Parametrization of the line
+/*Parametrization of the line
 	l(t) = a + t*b 
 	where are :
 	a = P1, b = P2 - P1
@@ -27,12 +21,35 @@ float PointToLineDistance_1(const Vector & P1, const Vector & P2, const Vector &
 	perpendicular to the line we calculating distance to, we can represent such line as vector 
 	with end point of crossover and point we caulculated distance to, x is such vector,
 	to find appropriate point of crossover we use definition of dotProduct, hence x * b should equal 0, 
-	now we only need to find t, hence  
+	now we only need to find t, using previous informations we get     
 	t = ((P3 * b) - (a * b) / vecLen(b) * vecLen(b)), desired distance is length of vector x */	  
 
-	t = ( (P3 * b) - (a * b)) /  vecLen(b) * vecLen(b);
+	/* implementation */
 
+float PointToLineDistance_1(const Vector & P1, const Vector & P2, const Vector & P3){
+	
 
+	float t;
+	Vector x;
+	Vector a = P1;
+	Vector b = P2 - P1;
+	// l(t) = a + t*b 
+	Vector c = P2 + P1;
+	float dotProduct = P1 * P2;
+	std::cout << "b length " << b.vecLen() << std::endl;
+	t = ( (P3 * b) - (a * b)) /  (b.vecLen() * b.vecLen());
+
+	std::cout << "t = " << t << std::endl;
+
+	x = a + (t * b) - P3;
+
+	std::cout << "Copying contructor test " << a;
+	std::cout << "Substraction test " << b;
+	std::cout << "Addition test " << c;
+	std::cout << "DotProduct test " << dotProduct << std::endl;
+	std::cout << "Length test " << a.vecLen() << std::endl;
+
+	return x.vecLen();
 
 
 }
@@ -42,13 +59,13 @@ int main(){
 
 	
 
-	Vector P1(1, 2 ,3);
-	Vector P2(3, 4 ,5);
-	Vector P3(2, 5, 4)
+	Vector P1(1, 3 ,2);
+	Vector P2(-5, 0,4);
+	Vector P3(1, 1, 1);
 
-	std::cout << "Distance is " << PointToLineDistance_1
+	std::cout << "Distance is " << PointToLineDistance_1(P1, P2, P3) << std::endl;
 
-
+	// PointToLineDistance_1(P1, P2, P3);
 
 
 	return 0;
