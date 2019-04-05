@@ -14,7 +14,6 @@ int main(void){
 	inOrder(root);
 
 	/*Task 1 (Calling the functions)*/
-
 	/************************/
 	/*v1*/ (isSorted_1(root)) ? (printf("Is sorted\n")) : (printf("Not sorted\n"));
 

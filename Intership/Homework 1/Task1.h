@@ -6,14 +6,13 @@
 
 	/*Declarations of functions used in 1st  and 2nd approach, returning Max (most right) and Min (most left) value of BS Tree
 	beggining from passed root */ 
-	
 	int Max(tnode *);
 	int Min(tnode *);
+
 
 	/*1. The simplest, thus the slowest version, visits some elements of BST many times, 
 	this approach uses above functions, definition and declaration of this approach 
 	in one place for readability */
-
 	int isSorted_1(tnode * node ){
 
 		if(node == NULL)
@@ -33,10 +32,7 @@
 	
 	/*2. Second approach, founded on deduction concluded from essential BS Tree property
 	on most left side of the tree each parent has greater value that it's child,
-	on most right side vice versa   
-	    */ 
-	
-  
+	on most right side vice versa*/ 
 	int Check(tnode * node, int min, int max){  
 	 
 	  if (node == NULL)  
@@ -56,8 +52,7 @@
 
 	/*3. Third approach, based on inOrder ruotine which gives values 
 	of BST in ascending order, thus previous value must be 
-	less or equal to the following, if not, then given tree is not BST */
-
+	less or equal to the following, if not, then given tree is not BST*/
 	int isSorted_3(tnode *node){
 	
 	static tnode * previous = NULL;
@@ -75,6 +70,5 @@
 	}
 	return 1;
 }
-
 
 #endif 

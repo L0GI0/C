@@ -1,9 +1,7 @@
 #include "Task2.h"
 
 
-
 Vector::Vector(float x, float y , float z):m_x(x), m_y(y), m_z(z){}
-
 
 
 Vector Vector::operator-(const Vector & toSub)const{
@@ -13,6 +11,7 @@ Vector Vector::operator-(const Vector & toSub)const{
 	tmp.m_z = this->m_z - toSub.m_z;
 	return tmp;
 }
+
 
 Vector Vector::operator+(const Vector & toAdd)const{
 	Vector tmp;
@@ -28,7 +27,26 @@ float Vector::operator*(const Vector & toMul)const{
 }
 
 
- Vector & operator*(float t, Vector &toMul){
+float Vector::vecDist(const Vector & toCD)const{
+	float x, y, z;
+	x = (toCD.m_x - this->m_x);
+	y = (toCD.m_y - this->m_y);
+	z = (toCD.m_z - this->m_z);
+	return sqrt( (x * x) + (y * y) + (z * z) );
+}
+	
+
+float Vector::vecLen()const{
+	return sqrt((this-> m_x * this-> m_x) + (this-> m_y * this-> m_y) + (this-> m_z * this-> m_z));
+}
+
+
+void Vector::operator()(float x, float y, float z){
+	m_x = x; m_y = y; m_z = z;
+}
+
+
+Vector & operator*(float t, Vector &toMul){
 	toMul.m_x *= t;
 	toMul.m_y *= t;
 	toMul.m_z *= t;
@@ -36,22 +54,8 @@ float Vector::operator*(const Vector & toMul)const{
 }
 
 
-
-// Vector & Vector::vecCross(const Vector & toCMul)const{
-
-// }
-
-// float Vector::vecDist(const Vector & toCMul)const{
-
-// }
-		
-
-
-float Vector::vecLen()const{
-	return sqrt((this-> m_x * this-> m_x) + (this-> m_y * this-> m_y) + (this-> m_z * this-> m_z));
-}
-
-
 std::ostream & operator <<(std::ostream & o, const Vector & tP){
-	return o << "[" << tP.m_x << ", " << tP.m_y << ", " << tP.m_z << "]" << std::endl; 
+	return o << "[" << tP.m_x << ", " << tP.m_y << ", " << tP.m_z << "]";
 }
+
+

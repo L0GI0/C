@@ -10,8 +10,8 @@ typedef struct tnode{
 	struct tnode *parent;
 }tnode;
 
-//functions declarations:
 
+//functions declarations:
 tnode *createLeaf(int value, tnode *root);
 void addLeaf(int value, tnode **root, tnode *current);
 void preOrder(tnode *);
